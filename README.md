@@ -10,3 +10,9 @@ Expected behavior: Class ATest is not compilable
 
 Actual behavior: Class ATest is not compilable
 
+Everything works fine if you run from CLI:
+
+```
+$ gradle wrapper
+$ ./gradlew build accTest
+```
