@@ -1,0 +1,25 @@
+allprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
+    }
+}
+
+sourceSets {
+    accTest 
+}
+
+dependencies {
+    accTestCompile group: 'com.google.guava', name: 'guava', version: '19.0'
+    accTestCompile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.0'
+}
+
